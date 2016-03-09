@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addplayerfragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.shuyun.tennisboard.TopBar
+        android:id="@+id/id_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        custom:leftButtonClickColor="@color/colorLightBlueGrey"
+        custom:leftButtonColor="@color/colorBlueGrey"
+        custom:leftButtonHeight="48dp"
+        custom:leftButtonMarginBottom="4dp"
+
+        custom:leftButtonMarginLeft="4dp"
+        custom:leftButtonMarginRight="4dp"
+        custom:leftButtonMarginTop="4dp"
+        custom:leftButtonWidth="48dp"
+        custom:leftImageViewBackground="@drawable/ic_leftarrow"
+        custom:leftImageViewHeight="24dp"
+        custom:leftImageViewMarginBottom="16dp"
+        custom:leftImageViewMarginLeft="16dp"
+        custom:leftImageViewMarginRight="16dp"
+        custom:leftImageViewMarginTop="16dp"
+
+        custom:leftImageViewWidth="24dp"
+        custom:mtitle="ADD PLAYER"
+        custom:mtitleTextColor="@color/colorTopMenuText"
+        custom:mtitleTextSize="16dp"
+        custom:rightButtonColor="@color/colorBlueGrey"
+        custom:rightButtonHeight="48dp"
+        custom:rightButtonMarginBottom="4dp"
+        custom:rightButtonMarginLeft="4dp"
+        custom:rightButtonMarginRight="4dp"
+        custom:rightButtonMarginTop="4dp"
+
+        custom:rightButtonWidth="48dp"
+        custom:rightImageViewHeight="24dp"
+        custom:rightImageViewMarginBottom="16dp"
+        custom:rightImageViewMarginLeft="16dp"
+        custom:rightImageViewMarginRight="16dp"
+        custom:rightImageViewMarginTop="16dp"
+        custom:rightImageViewWidth="24dp"
+        custom:topBarBackgroundColor="@color/colorBlueGrey">
+
+    </com.example.shuyun.tennisboard.TopBar>
+
+    <include layout="@layout/edit_layout" />
+
+    <Data.AfterAdding
+        android:id="@+id/afteradding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:clickable="true"
+        android:visibility="gone">
+
+    </Data.AfterAdding>
+
+</RelativeLayout>

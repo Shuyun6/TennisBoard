@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@color/colorLightBlueGrey">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/dataname"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="120dp"
+            android:text="xxx"
+            android:textColor="@color/colorTopMenuText"
+            android:textSize="24dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="36dp"
+            android:layout_toRightOf="@+id/imageview">
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Height:"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/dataheight"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/height"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/dataheight"
+                android:text="Weight:"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/dataweight"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/weight"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="56dp">
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Sex:"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/datasex"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/sex"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/birth"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/datasex"
+                android:text="Birth:"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/databirth"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/birth"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="76dp">
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Phone:"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/dataphone"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/phone"
+                android:autoLink="phone"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="96dp">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="Email:"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/dataemail"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@+id/email"
+                android:autoLink="email"
+                android:textColor="@color/colorTopMenuText"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.shuyun.tennisboard.TopBar
+        android:id="@+id/id_back"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        custom:leftButtonClickColor="@color/colorLightBlueGrey"
+        custom:leftButtonColor="@color/colorBlueGrey"
+        custom:leftButtonHeight="48dp"
+        custom:leftButtonMarginBottom="4dp"
+
+        custom:leftButtonMarginLeft="4dp"
+        custom:leftButtonMarginRight="4dp"
+        custom:leftButtonMarginTop="4dp"
+        custom:leftButtonWidth="48dp"
+        custom:leftImageViewBackground="@drawable/ic_leftarrow"
+        custom:leftImageViewHeight="24dp"
+        custom:leftImageViewMarginBottom="16dp"
+        custom:leftImageViewMarginLeft="16dp"
+        custom:leftImageViewMarginRight="16dp"
+        custom:leftImageViewMarginTop="16dp"
+
+        custom:leftImageViewWidth="24dp"
+        custom:mtitle="PLAYERS"
+        custom:mtitleTextColor="@color/colorTopMenuText"
+        custom:mtitleTextSize="16dp"
+        custom:rightButtonClickColor="@color/colorLightBlueGrey"
+        custom:rightButtonColor="@color/colorBlueGrey"
+        custom:rightButtonHeight="48dp"
+        custom:rightButtonMarginBottom="4dp"
+        custom:rightButtonMarginLeft="4dp"
+        custom:rightButtonMarginRight="4dp"
+
+        custom:rightButtonMarginTop="4dp"
+        custom:rightButtonWidth="48dp"
+        custom:rightImageViewBackground="@drawable/ic_add"
+        custom:rightImageViewHeight="24dp"
+        custom:rightImageViewMarginBottom="16dp"
+        custom:rightImageViewMarginLeft="16dp"
+        custom:rightImageViewMarginRight="16dp"
+        custom:rightImageViewMarginTop="16dp"
+        custom:rightImageViewWidth="24dp"
+        custom:topBarBackgroundColor="@color/colorBlueGrey">
+
+    </com.example.shuyun.tennisboard.TopBar>
+
+    <MenuItem.PlayerDataView
+        android:id="@+id/playerdataview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp">
+
+    </MenuItem.PlayerDataView>
+
+</RelativeLayout>

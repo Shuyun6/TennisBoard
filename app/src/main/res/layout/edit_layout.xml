@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="56dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="@color/colorLightBlueGrey"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="256dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLightBlueGrey"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="192dp"
+                    android:layout_height="192dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@color/colorTopMenuText"
+                    android:clickable="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Name"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <EditText
+                        android:id="@+id/editname"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_toRightOf="@id/name"
+                        android:textColor="@color/colorTopMenuText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/sex"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Sex"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <RadioGroup
+                        android:id="@+id/sexRadioGroup"
+                        android:layout_width="200dp"
+                        android:layout_height="56dp"
+                        android:layout_toRightOf="@id/sex"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/setRadioButtonMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:checked="true"
+                            android:text="Male"
+                            android:textColor="@color/colorTopMenuText" />
+
+                        <RadioButton
+                            android:id="@+id/setRadioButtonFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="Female"
+                            android:textColor="@color/colorTopMenuText" />
+
+                    </RadioGroup>
+
+                    <!--<EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:id="@+id/editsex"
+                        android:layout_toRightOf="@id/sex"
+                        android:shadowColor="@color/colorTopMenuText"/>-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/birth"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Birth"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <EditText
+                        android:id="@+id/editbirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_toRightOf="@id/birth"
+                        android:shadowColor="@color/colorTopMenuText"
+                        android:textColor="@color/colorTopMenuText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Email"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <EditText
+                        android:id="@+id/editemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_toRightOf="@id/email"
+                        android:shadowColor="@color/colorTopMenuText"
+                        android:textColor="@color/colorTopMenuText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Phone"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <EditText
+                        android:id="@+id/editphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_toRightOf="@id/phone"
+                        android:shadowColor="@color/colorTopMenuText"
+                        android:textColor="@color/colorTopMenuText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/height"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Height"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <EditText
+                        android:id="@+id/editheight"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_toRightOf="@id/height"
+                        android:shadowColor="@color/colorTopMenuText"
+                        android:textColor="@color/colorTopMenuText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp">
+
+                    <TextView
+                        android:id="@+id/weight"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="Weight"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <EditText
+                        android:id="@+id/editweight"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_toRightOf="@id/weight"
+                        android:shadowColor="@color/colorTopMenuText"
+                        android:textColor="@color/colorTopMenuText" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/buttonshape"
+                    android:gravity="center"
+                    android:text="Finish"
+                    android:textColor="@color/colorDeepGrey" />
+
+                <ImageView
+                    android:id="@+id/test"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

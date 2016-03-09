@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TennisBoard</string>
+    <string name="addview1">Add Player</string>
+    <string name="addview2">Add Match</string>
+</resources>

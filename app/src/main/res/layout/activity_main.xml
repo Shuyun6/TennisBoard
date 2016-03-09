@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:addview="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:topmenu="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shuyun.tennisboard.MainActivity">
+
+    <!--<fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="MenuItem.ContentFragment"
+        android:id="@+id/contentfragment"
+        android:layout_marginTop="56dp"/>-->
+
+    <com.example.shuyun.tennisboard.AddView
+        android:id="@+id/addview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+
+        addview:addViewHeight="48dp"
+        addview:addViewWidth="112dp"
+
+        addview:textView1MarginRight="3dp"
+        addview:textView1MarginTop="4dp"
+        addview:textView2MarginRight="3dp"
+        addview:textView2MarginTop="56dp"></com.example.shuyun.tennisboard.AddView>
+
+    <com.example.shuyun.tennisboard.TopBar
+        android:id="@+id/id_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        custom:leftButtonClickColor="@color/colorLightBlueGrey"
+        custom:leftButtonColor="@color/colorBlueGrey"
+        custom:leftButtonHeight="48dp"
+        custom:leftButtonMarginBottom="4dp"
+
+        custom:leftButtonMarginLeft="4dp"
+        custom:leftButtonMarginRight="4dp"
+        custom:leftButtonMarginTop="4dp"
+        custom:leftButtonWidth="48dp"
+        custom:leftImageViewBackground="@drawable/ic_menu_90"
+        custom:leftImageViewHeight="24dp"
+        custom:leftImageViewMarginBottom="16dp"
+        custom:leftImageViewMarginLeft="16dp"
+        custom:leftImageViewMarginRight="16dp"
+        custom:leftImageViewMarginTop="16dp"
+
+        custom:leftImageViewWidth="24dp"
+        custom:mtitle=""
+        custom:mtitleTextColor="@color/colorTopMenuText"
+        custom:mtitleTextSize="16dp"
+        custom:rightButtonClickColor="@color/colorLightBlueGrey"
+        custom:rightButtonColor="@color/colorBlueGrey"
+        custom:rightButtonHeight="48dp"
+        custom:rightButtonMarginBottom="4dp"
+        custom:rightButtonMarginLeft="4dp"
+        custom:rightButtonMarginRight="4dp"
+
+        custom:rightButtonMarginTop="4dp"
+        custom:rightButtonWidth="48dp"
+        custom:rightImageViewBackground="@drawable/ic_add"
+        custom:rightImageViewHeight="24dp"
+        custom:rightImageViewMarginBottom="16dp"
+        custom:rightImageViewMarginLeft="16dp"
+        custom:rightImageViewMarginRight="16dp"
+        custom:rightImageViewMarginTop="16dp"
+        custom:rightImageViewWidth="24dp"
+        custom:topBarBackgroundColor="@color/colorBlueGrey">
+
+    </com.example.shuyun.tennisboard.TopBar>
+
+    <com.example.shuyun.tennisboard.TopMenu
+        android:id="@+id/topmenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+
+        topmenu:backgroundColor="@color/colorBlueGrey"
+        topmenu:backgroundDrawable="@drawable/ic_menu"
+        topmenu:menuButtonClickColor="@color/colorLightBlueGrey"
+        topmenu:menuButtonColor="@color/colorBlueGrey"
+        topmenu:menuButtonHeight="48dp"
+        topmenu:menuButtonMarginBottom="4dp"
+        topmenu:menuButtonMarginLeft="4dp"
+        topmenu:menuButtonMarginRight="4dp"
+
+        topmenu:menuButtonMarginTop="4dp"
+        topmenu:menuButtonWidth="48dp"
+        topmenu:menuImageViewHeight="24dp"
+        topmenu:menuImageViewMarginBottom="16dp"
+        topmenu:menuImageViewMarginLeft="16dp"
+        topmenu:menuImageViewMarginRight="16dp"
+        topmenu:menuImageViewMarginTop="16dp"
+        topmenu:menuImageViewWidth="24dp"></com.example.shuyun.tennisboard.TopMenu>
+
+</RelativeLayout>

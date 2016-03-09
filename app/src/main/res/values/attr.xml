@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TopBar">
+        <attr name="mtitle" format="string" />
+        <attr name="mtitleTextSize" format="dimension" />
+        <attr name="mtitleTextColor" format="color" />
+
+        <attr name="topBarBackgroundColor" format="color" />
+
+        <attr name="leftImageViewBackground" format="reference|color" />
+        <attr name="rightImageViewBackground" format="reference|color" />
+
+        <attr name="leftButtonColor" format="color" />
+        <attr name="leftButtonClickColor" format="color" />
+        <attr name="rightButtonColor" format="color" />
+        <attr name="rightButtonClickColor" format="color" />
+
+        <attr name="leftButtonWidth" format="dimension" />
+        <attr name="leftButtonHeight" format="dimension" />
+        <attr name="leftButtonMarginLeft" format="dimension" />
+        <attr name="leftButtonMarginTop" format="dimension" />
+        <attr name="leftButtonMarginRight" format="dimension" />
+        <attr name="leftButtonMarginBottom" format="dimension" />
+
+        <attr name="rightButtonWidth" format="dimension" />
+        <attr name="rightButtonHeight" format="dimension" />
+        <attr name="rightButtonMarginLeft" format="dimension" />
+        <attr name="rightButtonMarginTop" format="dimension" />
+        <attr name="rightButtonMarginRight" format="dimension" />
+        <attr name="rightButtonMarginBottom" format="dimension" />
+
+        <attr name="leftImageViewWidth" format="dimension" />
+        <attr name="leftImageViewHeight" format="dimension" />
+        <attr name="leftImageViewMarginLeft" format="dimension" />
+        <attr name="leftImageViewMarginTop" format="dimension" />
+        <attr name="leftImageViewMarginRight" format="dimension" />
+        <attr name="leftImageViewMarginBottom" format="dimension" />
+
+        <attr name="rightImageViewWidth" format="dimension" />
+        <attr name="rightImageViewHeight" format="dimension" />
+        <attr name="rightImageViewMarginLeft" format="dimension" />
+        <attr name="rightImageViewMarginTop" format="dimension" />
+        <attr name="rightImageViewMarginRight" format="dimension" />
+        <attr name="rightImageViewMarginBottom" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TopMenu">
+        <attr name="menuButtonColor" format="color" />
+        <attr name="menuButtonClickColor" format="color" />
+
+        <attr name="menuButtonWidth" format="dimension" />
+        <attr name="menuButtonHeight" format="dimension" />
+        <attr name="menuButtonMarginLeft" format="dimension" />
+        <attr name="menuButtonMarginTop" format="dimension" />
+        <attr name="menuButtonMarginRight" format="dimension" />
+        <attr name="menuButtonMarginBottom" format="dimension" />
+
+        <attr name="menuImageViewWidth" format="dimension" />
+        <attr name="menuImageViewHeight" format="dimension" />
+        <attr name="menuImageViewMarginLeft" format="dimension" />
+        <attr name="menuImageViewMarginTop" format="dimension" />
+        <attr name="menuImageViewMarginRight" format="dimension" />
+        <attr name="menuImageViewMarginBottom" format="dimension" />
+
+        <attr name="backgroundDrawable" format="reference|color" />
+        <attr name="backgroundColor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="AddView">
+        <attr name="textView1MarginLeft" format="dimension" />
+        <attr name="textView1MarginTop" format="dimension" />
+        <attr name="textView1MarginRight" format="dimension" />
+        <attr name="textView1MarginBottom" format="dimension" />
+
+        <attr name="textView2MarginLeft" format="dimension" />
+        <attr name="textView2MarginTop" format="dimension" />
+        <attr name="textView2MarginRight" format="dimension" />
+        <attr name="textView2MarginBottom" format="dimension" />
+
+        <attr name="addViewWidth" format="dimension" />
+        <attr name="addViewHeight" format="dimension" />
+    </declare-styleable>
+</resources>
