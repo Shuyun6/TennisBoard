@@ -12,6 +12,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 
+import Data.AddMatchFragment;
 import Data.AddPlayerFragment;
 import MenuItem.PlayerFragment;
 
@@ -30,15 +31,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        fragmentManager=getFragmentManager();
-//        fragmentTransaction=fragmentManager.beginTransaction();
-//        contentFragment= (ContentFragment) fragmentManager.findFragmentById(R.id.contentfragment);
-
         topBar = (TopBar) findViewById(R.id.id_topbar);
         topBar.setOnTopBarClickListener(new TopBar.topBarClickListener() {
             @Override
             public void rightClick() {
-                AddButton(0);
+                AddButton();
             }
 
             @Override
@@ -61,22 +58,20 @@ public class MainActivity extends Activity {
         addView.setOnAddViewClickListener(new AddView.onAddViewClickListener() {
             @Override
             public void firstItem() {
-                AddButton(1);
+                AddButton();
                 openAddPlayerFragment();
             }
 
             @Override
             public void secondItem() {
-                AddButton(2);
+                AddButton();
+                openAddMatchFragment();
             }
         });
 
     }
 
     public void openPlayerData(View view) {
-//        contentFragment.playerDataView.setVisibility(View.VISIBLE);
-//        contentFragment.playerDataView.getData();
-//        menuClose(topMenu);
         isPlayerOpen = true;
         /**
          * Use isPlayerOpen to detect if is the state that close menu firstly and then show player fragment for menuClose()
@@ -98,10 +93,23 @@ public class MainActivity extends Activity {
         fragmentTransaction.commit();
     }
 
+    public void openAddMatchFragment(){
+        /**
+         * fragment
+         * */
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        AddMatchFragment addMatchFragment = new AddMatchFragment();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_right, R.animator.slide_out_left, R.animator.slide_in_right, R.animator.slide_out_left);
+        fragmentTransaction.replace(android.R.id.content, addMatchFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
     public void menuOpen(View view) {
 
         if (isAddButtonOpen == true) {  //if the addbutton is open and close it firstly then open top menu
-            AddButton(1);
+            AddButton();
         }
         topMenu.setVisibility(View.VISIBLE);
         topMenu.setClickable(true);
@@ -152,7 +160,10 @@ public class MainActivity extends Activity {
         topMenu.setVisibility(View.GONE);
     }
 
-    public void AddButton(final int choose) {
+    /**
+     * Show AddButton animation
+     * */
+    public void AddButton() {
         RotateAnimation rotateAnimation = new RotateAnimation(0, 360, (float) (topBar.rightImageView.getPivotX() + 0.5 * topBar.rightImageViewWidth),
                 (float) (topBar.rightImageView.getPivotY() + 0.5 * topBar.rightImageViewHeight));
         rotateAnimation.setDuration(624);
