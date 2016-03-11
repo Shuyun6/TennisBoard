@@ -48,5 +48,216 @@
 
     </com.example.shuyun.tennisboard.TopBar>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/detailCheckView"
+        android:gravity="center"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorLightBlueGrey">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <RelativeLayout
+                android:layout_width="256dp"
+                android:layout_height="56dp">
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="56dp"
+                    android:id="@+id/set"
+                    android:gravity="center_vertical"
+                    android:text="SET:"
+                    android:textColor="@color/colorTopMenuText"/>
+                <RadioGroup
+                    android:id="@+id/setRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/set">
 
+                    <RadioButton
+                        android:id="@+id/set1"
+                        android:layout_width="48dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="4dp"
+                        android:checked="true"
+                        android:text="1"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <RadioButton
+                        android:id="@+id/set3"
+                        android:layout_width="48dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="3"
+                        android:textColor="@color/colorTopMenuText" />
+                    <RadioButton
+                        android:id="@+id/set5"
+                        android:layout_width="48dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="5"
+                        android:textColor="@color/colorTopMenuText"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="256dp"
+                android:layout_height="56dp">
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="56dp"
+                    android:id="@+id/game"
+                    android:gravity="center_vertical"
+                    android:text="GAME:"
+                    android:textColor="@color/colorTopMenuText"/>
+                <RadioGroup
+                    android:id="@+id/gameRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_toRightOf="@+id/game"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/game4"
+                        android:layout_width="48dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="4dp"
+                        android:text="4"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <RadioButton
+                        android:id="@+id/game6"
+                        android:layout_width="48dp"
+                        android:layout_height="56dp"
+                        android:checked="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="6"
+                        android:textColor="@color/colorTopMenuText" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="256dp"
+                android:layout_height="56dp">
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="56dp"
+                    android:id="@+id/ad"
+                    android:gravity="center_vertical"
+                    android:text="Ad:"
+                    android:textColor="@color/colorTopMenuText"/>
+                <RadioGroup
+                    android:id="@+id/adRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_toRightOf="@+id/ad"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/adyes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:checked="true"
+                        android:text="YES"
+                        android:textColor="@color/colorTopMenuText" />
+
+                    <RadioButton
+                        android:id="@+id/adno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:text="NO"
+                        android:textColor="@color/colorTopMenuText" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="256dp"
+                android:layout_height="56dp"
+                android:id="@+id/next"
+                android:text="NEXT"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/buttonshape"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/addmatchplayersview"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorLightBlueGrey">
+        <LinearLayout
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view1">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/player1"
+                    android:background="@color/colorTopMenuText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:id="@+id/playername1"
+                    android:layout_toRightOf="@+id/player1"
+                    android:layout_marginLeft="16dp"
+                    android:singleLine="false"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:textColor="@color/colorTopMenuText"
+                    android:text="PLAYER1"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:id="@+id/view2">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/player2"
+                    android:background="@color/colorTopMenuText"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:id="@+id/playername2"
+                    android:layout_toRightOf="@+id/player2"
+                    android:layout_marginLeft="16dp"
+                    android:singleLine="false"
+                    android:gravity="center"
+                    android:textSize="24dp"
+                    android:textColor="@color/colorTopMenuText"
+                    android:text="PLAYER2"/>
+            </RelativeLayout>
+            <Button
+                android:layout_width="256dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:id="@+id/start"
+                android:background="@drawable/buttonshape"
+                android:text="START"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
 </RelativeLayout>
