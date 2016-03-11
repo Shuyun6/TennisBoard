@@ -16,7 +16,7 @@ import Data.AddMatchFragment;
 import Data.AddPlayerFragment;
 import MenuItem.PlayerFragment;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements AddMatchFragment.OnPlayerListSelectedListener{
 
     TopBar topBar;
     TopMenu topMenu;
@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
     FragmentTransaction fragmentTransaction;
     private boolean isAddButtonOpen;
     private boolean isPlayerOpen;
+    public AddMatchFragment addMatchFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +83,7 @@ public class MainActivity extends Activity {
 
     public void openAddPlayerFragment() {
         /**
-         * fragment
+         * add player fragment
          * */
         android.app.FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -95,13 +96,13 @@ public class MainActivity extends Activity {
 
     public void openAddMatchFragment(){
         /**
-         * fragment
+         * add match fragment
          * */
         android.app.FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        AddMatchFragment addMatchFragment = new AddMatchFragment();
+        addMatchFragment = new AddMatchFragment();
         fragmentTransaction.setCustomAnimations(R.animator.slide_in_right, R.animator.slide_out_left, R.animator.slide_in_right, R.animator.slide_out_left);
-        fragmentTransaction.replace(android.R.id.content, addMatchFragment);
+        fragmentTransaction.replace(android.R.id.content, addMatchFragment, "addMatchFragment");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
@@ -140,9 +141,12 @@ public class MainActivity extends Activity {
                     /**
                      * fragment
                      * */
-                    android.app.FragmentManager fragmentManager = getFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     PlayerFragment playerFragment = new PlayerFragment();
+                    Bundle bundle=new Bundle();
+                    bundle.putInt("Flage", 0);
+                    playerFragment.setArguments(bundle);
+
+                    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                     fragmentTransaction.setCustomAnimations(R.animator.slide_in_right, R.animator.slide_out_left, R.animator.slide_in_right, R.animator.slide_out_left);
                     fragmentTransaction.replace(android.R.id.content, playerFragment);
                     fragmentTransaction.addToBackStack(null);
@@ -274,4 +278,17 @@ public class MainActivity extends Activity {
         finish();
     }
 
+    @Override
+    public void onItemSelected() {
+        PlayerFragment playerFragment=new PlayerFragment();
+        Bundle bundle=new Bundle();
+        bundle.putInt("Flage", 1);
+        playerFragment.setArguments(bundle);
+        FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.slide_in_right, R.animator.slide_out_left, R.animator.slide_in_right, R.animator.slide_out_left);
+        fragmentTransaction.replace(android.R.id.content, playerFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+    }
 }
