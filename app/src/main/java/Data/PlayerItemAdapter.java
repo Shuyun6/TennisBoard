@@ -1,5 +1,6 @@
 package Data;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -29,6 +30,8 @@ public class PlayerItemAdapter extends BaseAdapter {
     private Context context;
     private Bitmap bitmap;
     private Database database;
+    public int flage;
+    public FragmentManager fragmentManager;
 
     public PlayerItemAdapter(Context context, List<ItemBean> itemBeanList) {
         this.itemBeanList = itemBeanList;
@@ -125,6 +128,8 @@ public class PlayerItemAdapter extends BaseAdapter {
              * Interface recall
              * */
             playerDataItemView = new PlayerDataItemView(context);
+            playerDataItemView.flage=flage;
+            playerDataItemView.fragmentManager=fragmentManager;
             playerDataItemView.setOnDeleteClickListener(new PlayerDataItemView.deleteClickListener() {
                 @Override
                 public void delete() {
