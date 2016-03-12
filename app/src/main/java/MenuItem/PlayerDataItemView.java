@@ -1,5 +1,7 @@
 package MenuItem;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +17,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.shuyun.tennisboard.DensityUtil;
+import com.example.shuyun.tennisboard.MainActivity;
 import com.example.shuyun.tennisboard.R;
 import com.example.shuyun.tennisboard.ShowPlayerInfoActivity;
+
+import Data.AddMatchFragment;
 
 /**
  * Created by Shuyun on 2/26/2016/026.
@@ -33,12 +38,12 @@ public class PlayerDataItemView extends HorizontalScrollView {
     public TextView textViewName, textViewHeight, textViewWeight, textViewPhoneNumber, textViewSex;
     public Button buttonEdit, buttonDelete;
     public LayoutInflater layoutInflater;
+    public int flage;
+    public FragmentManager fragmentManager;
     private Context context;
     private RelativeLayout relativeLayout;
     private boolean isScrolled;
-
-    private RelativeLayout.LayoutParams imageViewParams, textViewNameParams, textViewHeightParams,
-            textViewWeightParams, textViewPhoneNumberParams, textViewEditParams, textViewDeleteParams, viewParams;
+    private RelativeLayout.LayoutParams textViewEditParams, textViewDeleteParams, viewParams;
 
     private deleteClickListener listener;
 
@@ -52,6 +57,7 @@ public class PlayerDataItemView extends HorizontalScrollView {
         super(context);
         this.context = context;
         initialized();
+
     }
 
     public void setOnDeleteClickListener(deleteClickListener listener) {
@@ -65,14 +71,32 @@ public class PlayerDataItemView extends HorizontalScrollView {
 
         relativeLayout = new RelativeLayout(context);
         addView(relativeLayout);
+
+        /**
+         * Use flage to detect the state which from playerdataview that come for reading data
+         * or from addMatchFragment that come for choosing item for selecting player to match
+         * */
         relativeLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isScrolled == true) {
-                    smoothScrollTo(0, 0);
-                    isScrolled = false;
-                } else {
-                    startShowPlayerInfoActivity();
+                if(flage==0) {
+                    if (isScrolled == true) {
+                        smoothScrollTo(0, 0);
+                        isScrolled = false;
+                    } else {
+                        startShowPlayerInfoActivity();
+                    }
+                }else if(flage==1){
+                    AddMatchFragment addMatchFragment = (AddMatchFragment) fragmentManager.findFragmentByTag("addMatchFragment");
+                    addMatchFragment.name1=textViewName.getText().toString();
+                    addMatchFragment.sex1=textViewSex.getText().toString();
+                    fragmentManager.popBackStack();
+
+                }else if(flage==2){
+                    AddMatchFragment addMatchFragment = (AddMatchFragment) fragmentManager.findFragmentByTag("addMatchFragment");
+                    addMatchFragment.name2=textViewName.getText().toString();
+                    addMatchFragment.sex2=textViewSex.getText().toString();
+                    fragmentManager.popBackStack();
                 }
             }
         });
