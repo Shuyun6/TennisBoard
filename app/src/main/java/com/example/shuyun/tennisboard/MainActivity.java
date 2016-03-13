@@ -16,7 +16,7 @@ import Data.AddMatchFragment;
 import Data.AddPlayerFragment;
 import MenuItem.PlayerFragment;
 
-public class MainActivity extends Activity implements AddMatchFragment.OnPlayerListSelectedListener{
+public class MainActivity extends Activity {
 
     TopBar topBar;
     TopMenu topMenu;
@@ -278,17 +278,4 @@ public class MainActivity extends Activity implements AddMatchFragment.OnPlayerL
         finish();
     }
 
-    @Override
-    public void onItemSelected() {
-        PlayerFragment playerFragment=new PlayerFragment();
-        Bundle bundle=new Bundle();
-        bundle.putInt("Flage", 1);
-        playerFragment.setArguments(bundle);
-        FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.animator.slide_in_right, R.animator.slide_out_left, R.animator.slide_in_right, R.animator.slide_out_left);
-        fragmentTransaction.replace(android.R.id.content, playerFragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-
-    }
 }
