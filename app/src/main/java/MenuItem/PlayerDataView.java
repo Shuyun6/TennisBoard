@@ -1,5 +1,6 @@
 package MenuItem;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Point;
@@ -42,11 +43,12 @@ public class PlayerDataView extends RelativeLayout {
     public ListView listView;
     private Context context;
     private List<ItemBean> itemBeanList;
-    private PlayerItemAdapter playerItemAdapter;
+    public PlayerItemAdapter playerItemAdapter;
     private boolean isMale=true;
     private Button sexButtton;
     private LayoutParams sexButtonParams;
-    private Point point=new Point();
+    public int flage;
+    public FragmentManager fragmentManager;
 
     public PlayerDataView(final Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -115,6 +117,8 @@ public class PlayerDataView extends RelativeLayout {
             }
             listView= (ListView) v.findViewById(R.id.listview);
             playerItemAdapter=new PlayerItemAdapter(context, itemBeanList);
+            playerItemAdapter.flage=flage;
+            playerItemAdapter.fragmentManager=fragmentManager;
             listView.setAdapter(playerItemAdapter);
 
         }
