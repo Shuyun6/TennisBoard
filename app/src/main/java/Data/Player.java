@@ -4,18 +4,22 @@ package Data;
  * Created by Shuyun on 2/12/2016/012.
  */
 public class Player {
-    String image = null;
-    String name = null;
-    String sex = null;
-    String birth = null;
-    String email = null;
-    String phone = null;
-    String height = null, weight = null;
+    private String image = null;
+    private String name = null;
+    private String sex = null;
+    private String birth = null;
+    private String email = null;
+    private String phone = null;
+    private String height = null, weight = null;
 
     public Player(String name) {
         this.name = name;
     }
 
+    public Player(String name, String sex){
+        this.name=name;
+        this.sex=sex;
+    }
 
     public Player(String image, String name, String sex, String birth, String email, String phone, String height, String weight) {
         this.image = image;
