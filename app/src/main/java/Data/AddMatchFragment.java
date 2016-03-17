@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -20,6 +21,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.shuyun.tennisboard.MatchActivity;
 import com.example.shuyun.tennisboard.R;
 import com.example.shuyun.tennisboard.TopBar;
 
@@ -39,6 +41,7 @@ public class AddMatchFragment extends Fragment {
     private String set="1", game="6", ad="YES"; //default value
     public String name1=null, name2=null, sex1, sex2;
     public Bitmap bitmap1, bitmap2;
+    private Uri uri1, uri2;
     private View detailView, addmatchplayersview;
     private RadioGroup setRadioGroup, gameRadioGroup, adRadioGroup;
     private View view1, view2;
@@ -155,6 +158,16 @@ public class AddMatchFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(name1!=null&&name2!=null){
+                    Intent intent=new Intent(getActivity(), MatchActivity.class);
+                    Bundle bundle=new Bundle();
+                    bundle.putString("name1", name1);
+                    bundle.putString("name2", name2);
+                    bundle.putString("sex1", sex1);
+                    bundle.putString("sex2", sex2);
+                    bundle.putString("bitmapString1", uri1.toString());
+                    bundle.putString("bitmapString2", uri2.toString());
+                    intent.putExtras(bundle);
+                    startActivity(intent);
 
                 }
             }
@@ -175,9 +188,9 @@ public class AddMatchFragment extends Fragment {
             try {
                 cursor=database.getPlayer(name1, sex1);
                 cursor.moveToFirst();
-                Uri uri=Uri.parse(cursor.getString(0));
+                uri1=Uri.parse(cursor.getString(0));
                 try {
-                    bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+                    bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri1);
                     imageView1.setImageBitmap(bitmap1);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -198,9 +211,9 @@ public class AddMatchFragment extends Fragment {
                 try {
                     cursor = database.getPlayer(name2, sex2);
                     cursor.moveToFirst();
-                    Uri uri = Uri.parse(cursor.getString(0));
+                     uri2 = Uri.parse(cursor.getString(0));
                     try {
-                        bitmap2 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+                        bitmap2 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri2);
                         imageView2.setImageBitmap(bitmap2);
                     } catch (IOException e) {
                         e.printStackTrace();
