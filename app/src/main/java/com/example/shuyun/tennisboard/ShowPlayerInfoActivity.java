@@ -93,7 +93,6 @@ public class ShowPlayerInfoActivity extends Activity {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-                database.deletePlayer(dataname, datasex);
 
                 try {
                     if (database.ifExistPlayer(name, sex)) {
@@ -106,7 +105,7 @@ public class ShowPlayerInfoActivity extends Activity {
                             Uri uri = saveBitmaptoFile(playerInfoEditView.bitmap, name);
                             imageUriStr = uri.toString();
                         }
-
+                        database.deletePlayer(dataname, datasex);
                         Player player = new Player(imageUriStr, name, sex, birth, email, phone, height, weight);
                         database.insertPlayer(player);
                         database.close();
