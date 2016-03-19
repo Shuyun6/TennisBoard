@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="176dp"
+    android:layout_height="176dp">
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:id="@+id/rightwin"
+        android:background="@drawable/bluecircle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="76dp"
+        android:layout_marginRight="4dp"/>
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ic_yes"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="28dp"/>
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:id="@+id/rightlose"
+        android:background="@drawable/circle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="76dp"
+        android:layout_marginBottom="4dp"/>
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/ic_no"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="28dp"/>
+
+</RelativeLayout>
