@@ -166,6 +166,9 @@ public class AddMatchFragment extends Fragment {
                     bundle.putString("sex2", sex2);
                     bundle.putString("bitmapString1", uri1.toString());
                     bundle.putString("bitmapString2", uri2.toString());
+                    bundle.putString("set", set);
+                    bundle.putString("game", game);
+                    bundle.putString("ad", ad);
                     intent.putExtras(bundle);
                     startActivity(intent);
 
