@@ -14,224 +14,226 @@ public class Match {
     }
     /** Player1's match data
      * */
-    int firstServeWin1=0, secondServeWin1=0, ace1=0;
-    int leftNetWin1=0, highNetWin1=0, rightNetWin1=0;
-    int leftBaseWin1=0, highBaseWin1=0, rightBaseWin1=0;
+    int[] firstServeWin1, secondServeWin1, ace1;
+    
+    int[] leftNetWin1, highNetWin1, rightNetWin1;
+    int[] leftBaseWin1, highBaseWin1, rightBaseWin1;
 
-    int firstServeFault1=0, doubleFault1=0;
-    int leftNetFault1=0, highNetFault1=0, rightNetFault1=0;
-    int leftBaseFault1=0, highBaseFault1=0, rightBaseFault1=0;
+    int[] firstServeFault1, doubleFault1;
+    int[] leftNetFault1, highNetFault1, rightNetFault1;
+    int[] leftBaseFault1, highBaseFault1, rightBaseFault1;
 
-    int serveBreakPoint1=0, returnBreakPoint1=0;
+    int[] serveBreakPoint1, returnBreakPoint1;
 
     /** Player2's match data
      * */
-    int firstServeWin2=0, secondServeWin2=0, ace2=0;
-    int leftNetWin2=0, highNetWin2=0, rightNetWin2=0;
-    int leftBaseWin2=0, highBaseWin2=0, rightBaseWin2=0;
+    int[] firstServeWin2, secondServeWin2, ace2;
+    int[] leftNetWin2, highNetWin2, rightNetWin2;
+    int[] leftBaseWin2, highBaseWin2, rightBaseWin2;
 
-    int firstServeFault2=0, doubleFault2=0;
-    int leftNetFault2=0, highNetFault2=0, rightNetFault2=0;
-    int leftBaseFault2=0, highBaseFault2=0, rightBaseFault2=0;
+    int[] firstServeFault2, doubleFault2;
+    int[] leftNetFault2, highNetFault2, rightNetFault2;
+    int[] leftBaseFault2, highBaseFault2, rightBaseFault2;
 
-    int serveBreakPoint2=0, returnBreakPoint2=0;
+    int[] serveBreakPoint2, returnBreakPoint2;
 
     /** Match state
      * */
     int serveState=1;   //detect who serve in this game
 
-    public void addFirstServeWin(int playerId){
+    public void addFirstServeWin(int playerId, int setState){
         if(playerId==1) {
-            firstServeWin1 += 1;
+            firstServeWin1[setState-1] += 1;
         }else if(playerId==2){
-            firstServeWin2+=1;
+            firstServeWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addSecondServeWin(int playerId){
+    public void addSecondServeWin(int playerId, int setState){
         if(playerId==1) {
-            secondServeWin1 += 1;
+            secondServeWin1 [setState-1]+= 1;
         }else if(playerId==2){
-            secondServeWin2+=1;
+            secondServeWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addAce(int playerId){
+    public void addAce(int playerId, int setState){
         if(playerId==1) {
-            ace1 += 1;
+            ace1 [setState-1]+= 1;
         }else if(playerId==2){
-            ace2+=1;
+            ace2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addFirstServeFault(int playerId){
+    public void addFirstServeFault(int playerId, int setState){
         if(playerId==1) {
-            firstServeFault1 += 1;
+            firstServeFault1 [setState-1]+= 1;
         }else if(playerId==2){
-            firstServeFault2+=1;
+            firstServeFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addDoubleFault(int playerId){
+    public void addDoubleFault(int playerId, int setState){
         if(playerId==1) {
-            doubleFault1 += 1;
+            doubleFault1 [setState-1]+= 1;
         }else if(playerId==2){
-            doubleFault2+=1;
+            doubleFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addLeftNetWin(int playerId){
+    public void addLeftNetWin(int playerId, int setState){
         if(playerId==1){
-            leftNetWin1+=1;
+            leftNetWin1[setState-1]+=1;
         }else if(playerId==2){
-            leftNetWin2+=1;
+            leftNetWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addRightNetWin(int playerId){
+    public void addRightNetWin(int playerId, int setState){
         if(playerId==1){
-            rightNetWin1+=1;
+            rightNetWin1[setState-1]+=1;
         }else if(playerId==2){
-            rightNetWin2+=1;
+            rightNetWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addHighNetWin(int playerId){
+    public void addHighNetWin(int playerId, int setState){
         if(playerId==1){
-            highNetWin1+=1;
+            highNetWin1[setState-1]+=1;
         }else if(playerId==2){
-            highNetWin2+=1;
+            highNetWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addLeftBaseWin(int playerId){
+    public void addLeftBaseWin(int playerId, int setState){
         if(playerId==1){
-            leftBaseWin1+=1;
+            leftBaseWin1[setState-1]+=1;
         }else if(playerId==2){
-            leftBaseWin2+=1;
+            leftBaseWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addRightBaseWin(int playerId){
+    public void addRightBaseWin(int playerId, int setState){
         if(playerId==1){
-            rightBaseWin1+=1;
+            rightBaseWin1[setState-1]+=1;
         }else if(playerId==2){
-            rightBaseWin2+=1;
+            rightBaseWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addHighBaseWin(int playerId){
+    public void addHighBaseWin(int playerId, int setState){
         if(playerId==1){
-            highBaseWin1+=1;
+            highBaseWin1[setState-1]+=1;
         }else if(playerId==2){
-            highBaseWin2+=1;
+            highBaseWin2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addLeftNetFault(int playerId){
+    public void addLeftNetFault(int playerId, int setState){
         if(playerId==1){
-            leftNetFault1+=1;
+            leftNetFault1[setState-1]+=1;
         }else if(playerId==2){
-            leftNetFault2+=1;
+            leftNetFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addRightNetFault(int playerId){
+    public void addRightNetFault(int playerId, int setState){
         if(playerId==1){
-            rightNetFault1+=1;
+            rightNetFault1[setState-1]+=1;
         }else if(playerId==2){
-            rightNetFault2+=1;
+            rightNetFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addHighNetFault(int playerId){
+    public void addHighNetFault(int playerId, int setState){
         if(playerId==1){
-            highNetFault1+=1;
+            highNetFault1[setState-1]+=1;
         }else if(playerId==2){
-            highNetFault2+=1;
+            highNetFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addLeftBaseFault(int playerId){
+    public void addLeftBaseFault(int playerId, int setState){
         if(playerId==1){
-            leftBaseFault1+=1;
+            leftBaseFault1[setState-1]+=1;
         }else if(playerId==2){
-            leftBaseFault2+=1;
+            leftBaseFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addRightBaseFault(int playerId){
+    public void addRightBaseFault(int playerId, int setState){
         if(playerId==1){
-            rightBaseFault1+=1;
+            rightBaseFault1[setState-1]+=1;
         }else if(playerId==2){
-            rightBaseFault2+=1;
+            rightBaseFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addHighBaseFault(int playerId){
+    public void addHighBaseFault(int playerId, int setState){
         if(playerId==1){
-            highBaseFault1+=1;
+            highBaseFault1[setState-1]+=1;
         }else if(playerId==2){
-            highBaseFault2+=1;
+            highBaseFault2[setState-1]+=1;
         }else {
             return;
         }
     }
 
-    public void addServeBreakPoint(int playerId){
+    public void addServeBreakPoint(int playerId, int setState){
         if(playerId==1){
-            serveBreakPoint1+=1;
+            serveBreakPoint1[setState-1]+=1;
         }else if(playerId==2){
-            serveBreakPoint2+=1;
+            serveBreakPoint2[setState-1]+=1;
         }
     }
 
-    public void addReturnBreakPoint(int playerId){
+    public void addReturnBreakPoint(int playerId, int setState){
         if(playerId==1){
-            returnBreakPoint1+=1;
+            returnBreakPoint1[setState-1]+=1;
         }else if(playerId==2){
-            returnBreakPoint2+=1;
+            returnBreakPoint2[setState-1]+=1;
         }
     }
 
     public void changeServeState(){
-        if(this.serveState==1){
-            serveState=2;
-        }else {
-            serveState=1;
-        }
+//        if(this.serveState==1){
+//            serveState=2;
+//        }else {
+//            serveState=1;
+//        }
+        serveState=(serveState>1)?1:2;
     }
 
     public int getServeState(){
