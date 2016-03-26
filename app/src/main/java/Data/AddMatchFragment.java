@@ -171,6 +171,7 @@ public class AddMatchFragment extends Fragment {
                     bundle.putString("ad", ad);
                     intent.putExtras(bundle);
                     startActivity(intent);
+                    getFragmentManager().popBackStack();
 
                 }
             }
