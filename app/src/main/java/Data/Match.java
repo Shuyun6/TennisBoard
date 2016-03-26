@@ -21,6 +21,11 @@ public class Match {
         this.player1=player1;
         this.player2=player2;
     }
+
+    /** Match sets
+     * */
+    public int[] set1=new int[4], set2=new int[4],set3=new int[4],set4=new int[4],set5=new int[4];
+
     /** Player1's match data
      * */
     public int[] firstServeWin1=new int[5], secondServeWin1=new int[5], ace1=new int[5];
@@ -33,7 +38,7 @@ public class Match {
 
     public int[] servePointWin1=new int[5], servePointFault1=new int[5],
             breakPointWin1=new int[5], breakPointFault1=new int[5],
-            servePoints1=new int[5], breakPoints1=new int[5];
+            servePoints1=new int[5], breakPoints1=new int[5], serveCount1=new int[5];
 
     /** Player2's match data
      * */
@@ -47,7 +52,7 @@ public class Match {
 
     public int[] servePointWin2=new int[5], servePointFault2=new int[5],
             breakPointWin2=new int[5], breakPointFault2=new int[5],
-            servePoints2=new int[5], breakPoints2=new int[5];
+            servePoints2=new int[5], breakPoints2=new int[5], serveCount2=new int[5];
 
 
     /** Match state
@@ -258,13 +263,13 @@ public class Match {
         }
     }
 
-    public void addServePointFault(int playerId, int setState){
-        if(playerId==0){
-            servePointFault1[setState-1]+=1;
-        }else if(playerId==1){
-            servePointFault2[setState-1]+=1;
-        }
-    }
+//    public void addServePointFault(int playerId, int setState){
+//        if(playerId==0){
+//            servePointFault1[setState-1]+=1;
+//        }else if(playerId==1){
+//            servePointFault2[setState-1]+=1;
+//        }
+//    }
 
     public void addBreakPointWin(int playerId, int setState){
         if(playerId==0){
@@ -274,13 +279,13 @@ public class Match {
         }
     }
 
-    public void addBreakPointFault(int playerId, int setState){
-        if(playerId==0){
-            breakPointFault1[setState-1]+=1;
-        }else if(playerId==1){
-            breakPointFault2[setState-1]+=1;
-        }
-    }
+//    public void addBreakPointFault(int playerId, int setState){
+//        if(playerId==0){
+//            breakPointFault1[setState-1]+=1;
+//        }else if(playerId==1){
+//            breakPointFault2[setState-1]+=1;
+//        }
+//    }
 
     public void addServePoints(int playerId, int setState){
         if(playerId==0){
@@ -295,6 +300,14 @@ public class Match {
             breakPoints1[setState-1]+=1;
         }else if(playerId==1){
             breakPoints2[setState-1]+=1;
+        }
+    }
+
+    public void addServeCount(int playerId, int serveState){
+        if(playerId==0){
+            serveCount1[serveState-1]+=1;
+        }else if(playerId==1){
+            serveCount2[serveState-1]+=1;
         }
     }
 
